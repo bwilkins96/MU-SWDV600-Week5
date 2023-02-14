@@ -3,7 +3,7 @@
 
 def main():
     inputString = input("Enter your String: ")
-    characterIndex = input("Enter the index of the character you want: ")
+    characterIndex = int(input("Enter the index of the character you want: "))
 
     if characterIndex >= len(inputString):
         print('The string does not have that many characters')
