@@ -1,6 +1,8 @@
 # Cool or Drool Movie Rater
 # Produces a GUI summarizing the ratings of a movie from a .csv file
 
+from graphics import *
+
 def main():
     movieFile = None
 
@@ -32,12 +34,37 @@ def main():
     print(f'Total Number of Ratings: {totalRatings}')
     print(f'Cool Percentage: {coolPct:0.2f}%')
 
+    ratingImageName = ''
+    ratingText = ''
+
     if totalRatings < 10:
-        print('Too soon to rule')
+        ratingImageName = 'tooSoonToRule.gif'
+        ratingText = 'Too soon to rule'
     elif coolPct >= 60:
-        print('Certified COOL')
+        ratingImageName = 'cool.gif'
+        ratingText = 'Certified COOL'
     else:
-        print('Certified DROOL')
+        ratingImageName = 'drool.gif'
+        ratingText = 'Certified DROOL'
+    
+    print(ratingText)
+    
+    win = GraphWin('COOL or DROOL rater', 400, 400)
+    
+    titleText = Text(Point(200, 50), title)
+    titleText.draw(win)
+
+    ratingImage = Image(Point(200, 200), ratingImageName)
+    ratingImage.draw(win)
+
+    coolPctText = Text(Point(200, 350), f'{coolPct:0.0f}% {ratingText}')
+    coolPctText.draw(win)
+
+    while True:
+        keyPress = win.checkKey()
+        if keyPress == 'Escape': break
+    
+    win.close()
 
 if __name__ == '__main__':
     main()
