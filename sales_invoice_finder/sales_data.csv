@@ -1,0 +1,10 @@
+invoice_id,fname,lname,part_num,quantity,total
+38472,John,Doe,115,1,10.1
+38470,Jill,Doe,110,3,11.25
+38469,Mark,Zuckermerg,1,2,80.92
+38469,Mark,Zuckermerg,34,1,65.78
+38469,Mark,Zuckermerg,56,1,54.44
+45679,Tammy,LeFreebush,117,1,32.45
+11111,Lewis,Clarke,234,2,50.35
+93847,Jeff,Wezos,567,3,75.27
+10284,Mark,Zuckermerg,324,1,80.64
